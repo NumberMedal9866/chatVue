@@ -1,0 +1,275 @@
+.profile{
+    width: 400px;
+    height: 112px;
+    background: #323232;
+    border-radius: 10px 10px 0 0 ;
+    position: relative;
+}
+.prof-info{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 31px;
+    left: 20px;
+    color: white;
+    align-items: center;
+}
+.prof-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    h2{
+        font-weight: 500;
+        line-height: 14px;
+    }
+    p{
+        font-weight: 300;
+    }
+}
+.chat1{
+    transform: scale(0.9);
+    background: url(@/assets/img/chat-bg.png);
+    height: 800px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.text-area{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 632px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    position: relative;
+}
+.input{
+    position: relative;
+    background: #323232;
+    width: 400px;height: 56px;
+    border-radius: 0 0 10px 10px;
+    @media screen and (max-width:799px) {
+        height: 64px;
+    }
+    input{
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        width: 330px;
+        color: white;
+        @media screen and (max-width:799px) {
+            font-size: 20px;
+        }
+    }
+    img{
+        position: absolute;
+        top: 16px;
+        right: 20px;
+    }
+}
+.chat-holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.send{
+    max-width: 287px;
+    border-radius: 15px 15px 0px 15px;
+    background: #D0DCFF;
+    align-self: flex-end;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        padding: 5px 10px;
+        max-width: 243px;
+        word-wrap: break-word;
+        // margin: auto;
+    }
+    span{
+        position: absolute;
+        left: -45px;
+        color: #323232;
+        // margin: auto;
+        // margin: 0 0 0 -30px;
+    }
+}
+.recieve{
+    max-width: 287px;
+    border-radius: 15px 15px 15px 0px;
+    background: #C4BFFF;
+    align-self: flex-start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        padding: 5px 10px;
+        max-width: 243px;
+        word-wrap: break-word;
+    }
+    span{
+        position: absolute;
+        right: -45px;
+        color: #323232;
+        // margin: auto;
+        // margin: 0 0 0 -30px;
+    }
+}
+.modal{
+    background: rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;align-items: center;
+    &-enter-active, &-leave-active{
+        transition: 0.3s linear;
+    }
+    &-enter-from, &-leave-to{
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    &-content{
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 25px;
+        gap: 16px;
+        width: 312px;
+        h2{
+            color: var(--m-3-sys-light-on-surface, #1C1B1F);
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 500;
+        }
+        input, textarea{
+            display: block;
+            border-radius: 4px 4px 0px 0px;
+            background: #E2EDFF;
+            border-bottom: 1px solid #1C1B1F;
+            margin-bottom: 16px;
+            padding: 9px 16px;
+            width: 100%;
+            &::placeholder{
+                color: #000;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+            }
+        }
+        textarea{
+            margin-bottom: 24px;
+        }
+    }
+    &-btns{
+        display: flex;
+        float: right;
+        gap: 8px;
+        a{
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #CF1B1B;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 200ms;
+            &:hover{
+                border-radius: 5px;
+                background: #FFE1E1;                
+            }
+        }
+        a:last-child{
+            color: var(--m-3-sys-light-primary, #6750A4);
+            &:hover{
+                border-radius: 5px;
+                background: #E6DDFF;               
+            }
+        }
+    }
+}
+.img{
+    max-width: 243px;
+    border-radius: 15px 15px 0px 15px;
+    background: #D0DCFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    flex-direction: column;
+    position: relative;
+    // word-wrap: break-word;
+    img{
+        max-width: 243px;
+        border-radius: 15px 15px 0px 15px;
+        padding: 2px;
+    }
+    p{
+        max-width: 243px;
+        word-wrap: break-word;
+        align-self: flex-start;
+        padding: 0px 5px 6px 10px;
+    }
+    span{
+        position: absolute;
+        left: -45px;
+        color: #323232;
+        // margin: auto;
+        // margin: 0 0 0 -30px;
+    }
+}
+.pic{
+    max-width: 243px;
+    border-radius: 15px 15px 15px 0px;
+    background: #C4BFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    position: relative;
+    flex-direction: column;
+    img{
+        max-width: 243px;
+        border-radius: 15px 15px 15px 0px;
+        padding: 2px;
+    }
+    p{
+        align-self: flex-start;
+        padding: 0px 5px 6px 10px;
+        max-width: 243px;
+        word-wrap: break-word;
+    }
+    span{
+        position: absolute;
+        right: -45px;
+        color: #323232;
+        // margin: auto;
+        // margin: 0 0 0 -30px;
+    }
+}
+// ::-webkit-scrollbar{
+//     width: 3px;
+
+// }
+
+// ::-webkit-scrollbar-track{
+//     background: #ff0000;
+//     border-radius: 100vw;
+//     margin: .5em;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: #5900ff;
+//     border-radius: 100vw;
+// }
+::-webkit-scrollbar{
+    display: none;
+
+}

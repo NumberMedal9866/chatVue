@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: "system-ui";
+    background: none;
+    word-wrap: break-word;
+}
+body{
+    height: 100vh;
+    background: #98C0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:799px) {
+        height: 200vh;
+    }
+}
+@import url(@/components/main.scss);
